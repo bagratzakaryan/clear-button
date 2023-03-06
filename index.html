@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" description="Bagrat Zakaryan" />
+    <meta name="description" description="This page creating for test reason" />
+    <title>Clear Button With Simple CSS</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        position: relative;
+        width: 200px;
+      }
+      form input {
+        width: 100%;
+        padding-right: 20px;
+      }
+      form input:placeholder-shown + button {
+        opacity: 0;
+        pointer-events: none;
+      }
+      form button {
+        background: #ccc;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 5px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        transition: 0.1s;
+        padding: 0;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Clear Button With Simple CSS</h1>
+
+    <form>
+      <input type="text" placeholder="" />
+      <button type="reset">&times;</button>
+    </form>
+  </body>
+</html>
